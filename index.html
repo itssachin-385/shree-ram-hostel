@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Ram Hostel™ | Furnished Premium Hostel & PG</title>
+  <meta name="description" content="Discover the ease of all-inclusive living at Shree Ram Hostel™. Luxurious furnished rooms, 24/7 security, high-speed Wi-Fi & nutritious meals near major colleges & IT hubs.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='8' width='84' height='84' rx='20' fill='none' stroke='%23E53935' stroke-width='14'/><rect x='32' y='32' width='36' height='36' rx='8' fill='%23E53935'/></svg>">
+
+  <!-- Typography: Plus Jakarta Sans & Inter (Exact match with Settl.) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration matching Settl. -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E53935',
+              redHover: '#D32F2F',
+              redLight: '#FFEBEE',
+              blush: '#FFF5F2',
+              charcoal: '#1F2937',
+              slate: '#4B5563',
+              dark: '#0D0E11',
+              darkCard: '#1A1C22',
+              darkBorder: '#2A2D35'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1F2937;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom smooth scrollbars */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFFFFF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E5E7EB;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E53935;
+    }
+  </style>
+</head>
+<body class="selection:bg-[#E53935] selection:text-white">
+
+  <!-- ========================================================
+       1. HEADER / NAVBAR (Exact replica of Image 1)
+       - Background: Soft subtle blush tint #FFF5F2
+       - Left: Settl.-style red geometric logo + "Shree Ram Hostel™"
+       - Right: "Home" (active red), "Hostel Owners", "Explore Rooms",
+                "Call Now" pill button + 3-line hamburger icon
+  ======================================================== -->
+  <header class="sticky top-0 z-50 bg-[#FFF5F2] border-b border-[#F7E7E2]/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[76px] flex items-center justify-between">
+      
+      <!-- Left Logo: Settl.-style rounded square icon + Shree Ram Hostel™ -->
+      <a href="#" class="flex items-center gap-2.5 group focus:outline-none">
+        <svg class="w-8 h-8 shrink-0 text-[#E53935]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="34" height="34" rx="9" stroke="#E53935" stroke-width="5"/>
+          <rect x="14" y="14" width="12" height="12" rx="3" fill="#E53935"/>
+        </svg>
+        <div class="flex items-baseline">
+          <span class="text-2xl font-bold tracking-tight text-[#1F2937] leading-none">
+            Shree Ram Hostel<span class="text-[#E53935] text-xs font-bold align-top ml-0.5">™</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Right Nav Links & Actions -->
+      <div class="flex items-center gap-6 lg:gap-8">
+        
+        <!-- Desktop Navigation items -->
+        <nav class="hidden md:flex items-center gap-7 text-[15px]">
+          <!-- Active "Home" in red text -->
+          <a href="#home" class="font-semibold text-[#E53935] transition-colors">
+            Home
+          </a>
+          <!-- "Hostel Owners" -->
+          <a href="#campuses" class="font-medium text-[#1F2937] hover:text-[#E53935] transition-colors">
+            Hostel Owners
+          </a>
+          <!-- "Explore Rooms" -->
+          <a href="#explore-rooms" class="font-medium text-[#1F2937] hover:text-[#E53935] transition-colors">
+            Explore Rooms
+          </a>
+        </nav>
+
+        <!-- Solid Coral Red rounded-pill button "Call Now" -->
+        <button onclick="openCallModal()" class="bg-[#E53935] hover:bg-[#D32F2F] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-sm transition-all cursor-pointer">
+          Call Now
+        </button>
+
+        <!-- 3-line hamburger menu icon (matches Settl. desktop & mobile) -->
+        <button onclick="toggleMobileMenu()" class="p-1 text-[#E53935] hover:text-[#D32F2F] focus:outline-none cursor-pointer" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Slide-out Drawer / Overlay Menu -->
+    <div id="mobile-menu" class="hidden border-t border-[#F2DDD7] bg-[#FFF5F2] px-6 py-6 space-y-4 shadow-xl">
+      <nav class="flex flex-col space-y-3.5 max-w-7xl mx-auto">
+        <a href="#home" onclick="toggleMobileMenu()" class="text-base font-bold text-[#E53935] flex items-center justify-between py-1.5 border-b border-zinc-200/50">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#E53935]"></i>
+        </a>
+        <a href="#campuses" onclick="toggleMobileMenu()" class="text-base font-medium text-[#1F2937] hover:text-[#E53935] flex items-center justify-between py-1.5 border-b border-zinc-200/50">
+          <span>Hostel Owners & Campuses</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i>
+        </a>
+        <a href="#explore-rooms" onclick="toggleMobileMenu()" class="text-base font-medium text-[#1F2937] hover:text-[#E53935] flex items-center justify-between py-1.5 border-b border-zinc-200/50">
+          <span>Explore Rooms</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i>
+        </a>
+        <a href="#standards" onclick="toggleMobileMenu()" class="text-base font-medium text-[#1F2937] hover:text-[#E53935] flex items-center justify-between py-1.5 border-b border-zinc-200/50">
+          <span>Shree Ram Standards</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i>
+        </a>
+        <div class="pt-2">
+          <button onclick="openCallModal()" class="w-full bg-[#E53935] text-white py-3 rounded-full text-sm font-bold shadow-sm">
+            Call Admissions: +91 98XXX XXXXX
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ========================================================
+       2. HERO SECTION (Exact replica of Image 1)
+       - Split 2-Column Layout
+       - Left: Clean, unobstructed high-res vertical photo (warm wooden table, cozy couch, ambient lamp)
+       - Right:
+         * Big bold H1: "Furnished Premium Hostel & PG in Knowledge Hub, Tech City & Prime Campuses."
+         * Subtitle
+         * Floating Search Card (two gray select boxes + dark search button)
+         * Stats Row: 3 red line-art icons with red bold numbers
+  ======================================================== -->
+  <section id="home" class="bg-white pt-6 pb-16 lg:pt-10 lg:pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        
+        <!-- Left Side: Large vertical photo (clean, unobscured, warm ambient room) -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative rounded-3xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] aspect-[3/4] max-h-[580px] w-full bg-gray-100">
+            <!-- High-res photo matching Settl. warm aesthetic (dining table, comfortable couch, ambient lamp) -->
+            <img 
+              src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1200&q=80" 
+              alt="Furnished premium hostel and PG living room with wooden dining table, blue sofa and warm ambient lighting"
+              class="w-full h-full object-cover object-center"
+              loading="eager"
+            >
+          </div>
+        </div>
+
+        <!-- Right Side: Heading, Subtitle, Floating Search Card, Stats Row -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-6 lg:pl-2">
+          
+          <!-- Big Bold H1 Heading (Exact Settl. style from Image 1) -->
+          <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1F2937] leading-[1.18] tracking-tight">
+            Furnished Premium Hostel & PG in<br class="hidden sm:inline">
+            Knowledge Hub, Tech City &<br class="hidden sm:inline">
+            Prime Campuses.
+          </h1>
+
+          <!-- Subtitle (Exact Settl. style from Image 1) -->
+          <p class="text-sm sm:text-base text-[#4B5563] leading-relaxed max-w-xl font-normal">
+            Discover the ease of all-inclusive living in a peaceful, secure & disciplined community, perfectly situated near major colleges & IT hubs!
+          </p>
+
+          <!-- Floating Search Card (Exact Settl. style from Image 1) -->
+          <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#F3F4F6] max-w-xl">
+            <form onsubmit="handleSearch(event)" class="flex flex-col sm:flex-row items-stretch sm:items-end gap-3.5">
+              
+              <!-- Filter 1: Find your place / near by -->
+              <div class="flex-1 space-y-1.5">
+                <label for="campus-select" class="block text-xs font-semibold text-gray-800">
+                  Find your place / near by
+                </label>
+                <div class="relative bg-[#F9FAFB] rounded-lg border border-gray-100 px-3.5 py-2.5 flex items-center justify-between">
+                  <select id="campus-select" class="w-full bg-transparent text-sm font-medium text-gray-700 focus:outline-none appearance-none pr-5 cursor-pointer">
+                    <option value="all">All Branches / Campus</option>
+                    <option value="main">Main Campus, Knowledge Hub</option>
+                    <option value="north">North City Wing</option>
+                    <option value="tech">Tech Park Branch</option>
+                    <option value="executive">Executive Block</option>
+                  </select>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 absolute right-3 pointer-events-none"></i>
+                </div>
+              </div>
+
+              <!-- Filter 2: Type of stay looking for -->
+              <div class="flex-1 space-y-1.5">
+                <label for="room-type-select" class="block text-xs font-semibold text-gray-800">
+                  Type of stay looking for
+                </label>
+                <div class="relative bg-[#F9FAFB] rounded-lg border border-gray-100 px-3.5 py-2.5 flex items-center justify-between">
+                  <select id="room-type-select" class="w-full bg-transparent text-sm font-medium text-gray-700 focus:outline-none appearance-none pr-5 cursor-pointer">
+                    <option value="all">All categories</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Sharing</option>
+                    <option value="triple">Triple Sharing</option>
+                    <option value="ac">AC / Non-AC</option>
+                  </select>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 absolute right-3 pointer-events-none"></i>
+                </div>
+              </div>
+
+              <!-- Action: Dark rounded-xl search button with white magnifying glass icon -->
+              <div class="shrink-0">
+                <button type="submit" class="w-full sm:w-[50px] h-[46px] bg-[#111827] hover:bg-black text-white rounded-xl flex items-center justify-center transition-all shadow-sm cursor-pointer" aria-label="Search">
+                  <span class="sm:hidden font-semibold text-sm mr-2">Search</span>
+                  <i data-lucide="search" class="w-5 h-5 text-white"></i>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Stats Row (Exact replica of Image 1):
+               3 red line-art icons with red bold numbers
+          -->
+          <div class="pt-4 max-w-xl">
+            <div class="flex items-center justify-between gap-4">
+              
+              <!-- Stat 1: 3+ Campuses -->
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 shrink-0 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" />
+                  <path d="M9 22v-4h6v4" />
+                  <path d="M8 6h.01" />
+                  <path d="M16 6h.01" />
+                  <path d="M8 10h.01" />
+                  <path d="M16 10h.01" />
+                  <path d="M8 14h.01" />
+                  <path d="M16 14h.01" />
+                </svg>
+                <div class="flex items-baseline gap-1 text-sm">
+                  <span class="text-[#E53935] font-bold text-base">3+</span>
+                  <span class="text-[#1F2937] font-medium text-xs sm:text-sm">Campuses</span>
+                </div>
+              </div>
+
+              <!-- Stat 2: 100+ Rooms -->
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 shrink-0 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                  <circle cx="18" cy="5" r="1.5" fill="#E53935" stroke="none" />
+                </svg>
+                <div class="flex items-baseline gap-1 text-sm">
+                  <span class="text-[#E53935] font-bold text-base">100+</span>
+                  <span class="text-[#1F2937] font-medium text-xs sm:text-sm">Rooms</span>
+                </div>
+              </div>
+
+              <!-- Stat 3: 2000+ Students & Pros hosted -->
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 shrink-0 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                <div class="flex items-baseline gap-1 text-sm">
+                  <span class="text-[#E53935] font-bold text-base">2000+</span>
+                  <span class="text-[#1F2937] font-medium text-xs sm:text-sm truncate">Students hosted</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       3. SECTION 2: "COZY CORNERS ACROSS CAMPUSES" (Exact replica of Image 2)
+       - Section Title: "Cozy corners across locations!" (Left-aligned!)
+       - Subtitle: "Embrace a world of modern student & executive living: Comfort & security guaranteed!"
+       - 4-Card Responsive Grid:
+         * Clean rounded-2xl photo with smooth hover zoom
+         * Below photo: Branch title in bold font
+         * Subtext below title: Red line icon + "500+ Beds"
+  ======================================================== -->
+  <section id="campuses" class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Subtitle (Left aligned, exactly like Image 2) -->
+      <div class="mb-10 text-left">
+        <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1F2937] tracking-tight">
+          Cozy corners across locations!
+        </h2>
+        <p class="text-sm sm:text-base text-[#4B5563] mt-2 font-normal">
+          Embrace a world of modern student & executive living: Comfort & security guaranteed!
+        </p>
+      </div>
+
+      <!-- 4-Card Responsive Grid (Exact replica of Image 2) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Main Campus, Knowledge Hub + 500+ Beds -->
+        <div class="group cursor-pointer branch-card" data-branch="main" onclick="openRoomDetailsModal('Main Campus, Knowledge Hub', '500+ Beds', '₹8,499/mo', 'Engineering & Medical Hub')">
+          <!-- Rounded-2xl Photo with subtle zoom -->
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
+            <img 
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
+              alt="Main Campus, Knowledge Hub modern glass facade building"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              loading="lazy"
+            >
+          </div>
+          <!-- Clean typography below photo (exact match to Image 2) -->
+          <div class="pt-3.5 space-y-1">
+            <h3 class="text-base font-bold text-[#1F2937] group-hover:text-[#E53935] transition-colors">
+              Main Campus, Knowledge Hub
+            </h3>
+            <div class="flex items-center gap-1.5 text-xs text-[#4B5563]">
+              <svg class="w-3.5 h-3.5 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4"/>
+              </svg>
+              <span>500+ Beds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: North City Wing + 300+ Beds -->
+        <div class="group cursor-pointer branch-card" data-branch="north" onclick="openRoomDetailsModal('North City Wing', '300+ Beds', '₹7,999/mo', 'Near University Metro')">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
+            <img 
+              src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80" 
+              alt="North City Wing historic and modern architectural landmark"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              loading="lazy"
+            >
+          </div>
+          <div class="pt-3.5 space-y-1">
+            <h3 class="text-base font-bold text-[#1F2937] group-hover:text-[#E53935] transition-colors">
+              North City Wing
+            </h3>
+            <div class="flex items-center gap-1.5 text-xs text-[#4B5563]">
+              <svg class="w-3.5 h-3.5 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4"/>
+              </svg>
+              <span>300+ Beds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Tech Park Branch + 400+ Beds -->
+        <div class="group cursor-pointer branch-card" data-branch="tech" onclick="openRoomDetailsModal('Tech Park Branch', '400+ Beds', '₹9,200/mo', 'Opposite IT Park')">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
+            <img 
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+              alt="Tech Park Branch iconic modern tower in IT corridor"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              loading="lazy"
+            >
+          </div>
+          <div class="pt-3.5 space-y-1">
+            <h3 class="text-base font-bold text-[#1F2937] group-hover:text-[#E53935] transition-colors">
+              Tech Park Branch
+            </h3>
+            <div class="flex items-center gap-1.5 text-xs text-[#4B5563]">
+              <svg class="w-3.5 h-3.5 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4"/>
+              </svg>
+              <span>400+ Beds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Executive Block + 200+ Beds -->
+        <div class="group cursor-pointer branch-card" data-branch="executive" onclick="openRoomDetailsModal('Executive Block', '200+ Beds', '₹11,500/mo', 'Civil Lines Solo Living')">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
+            <img 
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+              alt="Executive Block upscale architecture and quiet residential enclave"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              loading="lazy"
+            >
+          </div>
+          <div class="pt-3.5 space-y-1">
+            <h3 class="text-base font-bold text-[#1F2937] group-hover:text-[#E53935] transition-colors">
+              Executive Block
+            </h3>
+            <div class="flex items-center gap-1.5 text-xs text-[#4B5563]">
+              <svg class="w-3.5 h-3.5 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <path d="M9 22v-4h6v4"/>
+              </svg>
+              <span>200+ Beds</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       4. SECTION 3: "SHREE RAM STANDARDS" (Exact replica of Image 3)
+       - Split Layout:
+         * Left: Overlapping dual-photo montage (sunny happy student studying + overlapping garden/entrance)
+         * Right:
+           - Title: "Shree Ram standards"
+           - Subtitle: "Your hostel life, elevated for peace of mind & focus!"
+           - 6-Item Grid: 3 COLUMNS × 2 ROWS with clean line icons!
+           - Outlined Red Button: "Explore our rooms"
+  ======================================================== -->
+  <section id="standards" class="py-16 lg:py-24 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+        
+        <!-- Left: Overlapping dual-photo montage (Exact replica of Image 3) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
+            
+            <!-- Large Photo: Happy person relaxing/studying in bright modern bedroom -->
+            <div class="relative rounded-3xl overflow-hidden shadow-lg aspect-[4/5] w-full max-w-sm sm:max-w-md bg-gray-100">
+              <img 
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" 
+                alt="Happy student enjoying a comfortable, bright, peaceful room at Shree Ram Hostel"
+                class="w-full h-full object-cover object-center"
+                loading="lazy"
+              >
+            </div>
+
+            <!-- Smaller overlapping photo at bottom-left (charming yellow facade / garden) -->
+            <div class="absolute -bottom-6 -left-3 sm:-left-6 w-44 sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white z-20">
+              <img 
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" 
+                alt="Charming hostel entrance with plants and warm architecture"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Heading, Subtitle, 3-Column Feature Grid, Outlined Red Button -->
+        <div class="lg:col-span-7 space-y-6 pt-6 lg:pt-0">
+          
+          <div>
+            <!-- Title (Exact Settl. style from Image 3) -->
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2937] tracking-tight">
+              Shree Ram standards
+            </h2>
+            
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg font-semibold text-[#1F2937] mt-2">
+              Your hostel life, elevated for peace of mind & focus!
+            </p>
+          </div>
+
+          <!-- 6-Item Feature Grid: 3 COLUMNS × 2 ROWS (Exact replica of Image 3) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-7 gap-x-5 pt-3">
+            
+            <!-- Item 1: 24/7 power backup -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="zap" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">24/7 power backup</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Blackouts? Nope, 100% uninterrupted study & sleep!</p>
+            </div>
+
+            <!-- Item 2: Fully furnished -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="armchair" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">Fully furnished</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Bring your bags & books, everything else is ready!</p>
+            </div>
+
+            <!-- Item 3: High-tech security -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="shield-check" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">High-tech security</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Biometric entry, 24/7 CCTV & verified warden security.</p>
+            </div>
+
+            <!-- Item 4: High speed internet -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="wifi" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">High speed internet</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Say goodbye to buffering during online exams & classes!</p>
+            </div>
+
+            <!-- Item 5: Nutritious homestyle food -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="utensils" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">Nutritious homestyle food</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Hygienic 3-time meals crafted for health & taste.</p>
+            </div>
+
+            <!-- Item 6: Daily cleaning & laundry -->
+            <div class="space-y-2">
+              <div class="w-8 h-8 rounded-full bg-[#FFF5F2] flex items-center justify-center text-[#1F2937]">
+                <i data-lucide="sparkle" class="w-4 h-4 stroke-[2]"></i>
+              </div>
+              <h4 class="text-sm font-bold text-[#1F2937]">Daily cleaning & laundry</h4>
+              <p class="text-xs text-[#4B5563] leading-snug">Forget the hassle of housework with on-site laundry & daily housekeeping.</p>
+            </div>
+
+          </div>
+
+          <!-- Outlined Red Button (Exact Settl. style from Image 3):
+               border-2 border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white rounded-md px-6 py-2.5 font-medium transition-all
+          -->
+          <div class="pt-3">
+            <a 
+              href="#explore-rooms" 
+              class="border-2 border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white rounded-md px-6 py-2.5 font-medium text-sm transition-all inline-block cursor-pointer"
+            >
+              Explore our rooms
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       5. EXPLORE ROOMS SECTION (Single, Double, Triple)
+  ======================================================== -->
+  <section id="explore-rooms" class="py-16 lg:py-20 bg-[#FBFBFA] border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#1F2937] tracking-tight">
+            Curated room spaces
+          </h2>
+          <p class="text-xs sm:text-sm text-[#4B5563] mt-1.5">
+            Orthopedic mattresses, ergonomic study bays, high-speed WiFi & homestyle meals included.
+          </p>
+        </div>
+
+        <!-- Room Filter Tabs -->
+        <div class="flex items-center gap-2" id="room-filters">
+          <button onclick="filterRooms('all')" class="room-tab active px-4 py-1.5 rounded-full text-xs font-bold bg-[#111827] text-white cursor-pointer transition-colors">
+            All
+          </button>
+          <button onclick="filterRooms('single')" class="room-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 cursor-pointer transition-colors">
+            Single
+          </button>
+          <button onclick="filterRooms('double')" class="room-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 cursor-pointer transition-colors">
+            Double Sharing
+          </button>
+          <button onclick="filterRooms('triple')" class="room-tab px-4 py-1.5 rounded-full text-xs font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 cursor-pointer transition-colors">
+            Triple Sharing
+          </button>
+        </div>
+      </div>
+
+      <!-- Room Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="rooms-grid">
+        
+        <!-- Room 1: Single Room -->
+        <div class="room-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="single">
+          <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+            <img 
+              src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" 
+              alt="Single room at Shree Ram Hostel"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+            <span class="absolute top-3 left-3 bg-white/95 text-xs font-bold px-2.5 py-0.5 rounded-full text-[#1F2937]">
+              Private Sanctuary
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-[#1F2937]">Executive Single Room</h3>
+                <span class="text-xs font-bold text-[#E53935]">AC Available</span>
+              </div>
+              <p class="text-xs text-[#4B5563] mt-1.5">
+                Private workstation, dedicated bookshelf, attached balcony & digital lock.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase font-semibold">Starting from</span>
+                <p class="text-base font-bold text-[#1F2937]">₹12,499<span class="text-xs font-normal text-gray-500">/mo</span></p>
+              </div>
+              <button onclick="openBookingModal('Executive Single Room')" class="bg-[#111827] hover:bg-black text-white text-xs font-semibold px-4 py-2 rounded-lg cursor-pointer transition-colors">
+                Book a Visit
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2: Double Sharing -->
+        <div class="room-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="double">
+          <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+            <img 
+              src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" 
+              alt="Double sharing room at Shree Ram Hostel"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+            <span class="absolute top-3 left-3 bg-[#E53935] text-xs font-bold px-2.5 py-0.5 rounded-full text-white">
+              Most Popular
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-[#1F2937]">Double Sharing Deluxe</h3>
+                <span class="text-xs font-bold text-emerald-600">Available</span>
+              </div>
+              <p class="text-xs text-[#4B5563] mt-1.5">
+                Twin study desks, separate wardrobes, orthopedic beds & dual charging points.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase font-semibold">Starting from</span>
+                <p class="text-base font-bold text-[#1F2937]">₹8,499<span class="text-xs font-normal text-gray-500">/mo</span></p>
+              </div>
+              <button onclick="openBookingModal('Double Sharing Deluxe')" class="bg-[#111827] hover:bg-black text-white text-xs font-semibold px-4 py-2 rounded-lg cursor-pointer transition-colors">
+                Book a Visit
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3: Triple Sharing -->
+        <div class="room-card group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col" data-category="triple">
+          <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
+            <img 
+              src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" 
+              alt="Triple sharing room at Shree Ram Hostel"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+            <span class="absolute top-3 left-3 bg-white/95 text-xs font-bold px-2.5 py-0.5 rounded-full text-[#1F2937]">
+              Budget Friendly
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-[#1F2937]">Triple Sharing Classic</h3>
+                <span class="text-xs font-bold text-blue-600">Value Pick</span>
+              </div>
+              <p class="text-xs text-[#4B5563] mt-1.5">
+                Spacious layout, 3 independent study stations, high airflow & daily sanitization.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-gray-400 uppercase font-semibold">Starting from</span>
+                <p class="text-base font-bold text-[#1F2937]">₹6,999<span class="text-xs font-normal text-gray-500">/mo</span></p>
+              </div>
+              <button onclick="openBookingModal('Triple Sharing Classic')" class="bg-[#111827] hover:bg-black text-white text-xs font-semibold px-4 py-2 rounded-lg cursor-pointer transition-colors">
+                Book a Visit
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       6. FOOTER (Exact replica of Image 4)
+       - Solid Matte Black (#0D0E11), text-white
+       - Col 1: Logo + short paragraph
+       - Col 2: "Useful Links" with 2 sub-columns side-by-side
+       - Col 3: Sleek dark rounded card (#1A1C22) with Call us, Email ID in Coral Red, Regd Office / Campus Address
+  ======================================================== -->
+  <footer class="bg-[#0D0E11] text-white pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- 3-Column Layout (Exact match to Image 4) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-zinc-800">
+        
+        <!-- Col 1: Logo + Short Paragraph -->
+        <div class="md:col-span-4 space-y-4">
+          <a href="#" class="flex items-center gap-2.5 group">
+            <svg class="w-8 h-8 shrink-0 text-[#E53935]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="34" height="34" rx="9" stroke="#E53935" stroke-width="5"/>
+              <rect x="14" y="14" width="12" height="12" rx="3" fill="#E53935"/>
+            </svg>
+            <span class="text-2xl font-bold tracking-tight text-white leading-none">
+              Shree Ram Hostel<span class="text-[#E53935] text-xs font-bold align-top ml-0.5">™</span>
+            </span>
+          </a>
+          
+          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal max-w-sm">
+            Shree Ram Hostel is redefining student and professional living with modern amenities, security, and a focused study environment.
+          </p>
+        </div>
+
+        <!-- Col 2: Useful Links (2 sub-columns side-by-side, exact match to Image 4) -->
+        <div class="md:col-span-4 space-y-4">
+          <h3 class="text-sm font-bold text-white">Useful Links</h3>
+          <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm text-zinc-400">
+            <ul class="space-y-2.5">
+              <li><a href="#home" class="hover:text-[#E53935] transition-colors">About Us</a></li>
+              <li><a href="#explore-rooms" class="hover:text-[#E53935] transition-colors">Room Options</a></li>
+              <li><a href="#standards" class="hover:text-[#E53935] transition-colors">Food Menu</a></li>
+              <li><a href="#standards" class="hover:text-[#E53935] transition-colors">Rules & Regulations</a></li>
+            </ul>
+            <ul class="space-y-2.5">
+              <li><a href="#campuses" class="hover:text-[#E53935] transition-colors">Hostel Owners</a></li>
+              <li><a href="#campuses" class="hover:text-[#E53935] transition-colors">FAQs</a></li>
+              <li><a href="#" onclick="openCallModal()" class="hover:text-[#E53935] transition-colors">Contact</a></li>
+              <li><a href="#" class="hover:text-[#E53935] transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Col 3: Sleek dark rounded card #1A1C22 (Exact match to Image 4) -->
+        <div class="md:col-span-4">
+          <div class="bg-[#1A1C22] border border-[#2A2D35] rounded-2xl p-6 space-y-3.5">
+            
+            <!-- Call us : +91 98XXX XXXXX (Coral Red #E53935) -->
+            <div class="text-xs sm:text-sm">
+              <span class="text-zinc-300 font-medium">Call us : </span>
+              <a href="tel:+919876543210" class="text-[#E53935] font-semibold hover:underline">
+                +91 98XXX XXXXX
+              </a>
+            </div>
+
+            <!-- Email ID : contact@shreeramhostel.com (Coral Red #E53935) -->
+            <div class="text-xs sm:text-sm">
+              <span class="text-zinc-300 font-medium">Email ID : </span>
+              <a href="mailto:contact@shreeramhostel.com" class="text-[#E53935] font-semibold hover:underline break-all">
+                contact@shreeramhostel.com
+              </a>
+            </div>
+
+            <!-- Campus Address : followed by details -->
+            <div class="text-xs sm:text-sm pt-1">
+              <span class="text-zinc-300 font-medium">Campus Address :</span>
+              <p class="font-bold text-white text-sm mt-1.5">
+                Main Campus, Knowledge Hub
+              </p>
+              <p class="text-xs text-zinc-400 leading-relaxed mt-1">
+                Knowledge Hub Boulevard, Opposite Central University North Gate, Tech Corridor Sector 4, PIN 201301.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <p>© 2026 Shree Ram Hostel™. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Stay</a>
+          <a href="#" class="hover:text-zinc-400 transition-colors">Privacy</a>
+          <a href="#" class="hover:text-zinc-400 transition-colors">Safety Standards</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================
+       MODAL: CALL NOW DIALOG
+  ======================================================== -->
+  <div id="call-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-gray-100">
+      
+      <button onclick="closeCallModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-1.5 rounded-lg hover:bg-gray-100" aria-label="Close">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-2xl bg-[#FFF5F2] text-[#E53935] flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="phone-call" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#1F2937]">Call Shree Ram Hostel™</h3>
+        <p class="text-xs text-[#4B5563] mt-1">Admissions & counselling open 24/7.</p>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        <a href="tel:+919876543210" class="flex items-center justify-between bg-[#E53935] hover:bg-[#D32F2F] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
+          <div class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>Call: +91 98XXX XXXXX</span>
+          </div>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+
+        <a href="https://wa.me/919876543210?text=Hi%20Shree%20Ram%20Hostel,%20I%20am%20inquiring%20about%20room%20availability" target="_blank" class="flex items-center justify-between bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
+          <div class="flex items-center gap-3">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Admissions Desk</span>
+          </div>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="mt-5 pt-4 border-t border-gray-100">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-[#1F2937] mb-2">Request Instant Callback:</h4>
+        <form onsubmit="handleCallbackSubmit(event)" class="space-y-2.5">
+          <input type="text" required placeholder="Your Name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          <input type="tel" required placeholder="Mobile Number" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          <button type="submit" class="w-full bg-[#111827] hover:bg-black text-white text-xs font-bold py-2.5 rounded-xl transition-colors">
+            Request Callback
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================
+       MODAL: SCHEDULE VISIT / ROOM DETAILS
+  ======================================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border border-gray-100">
+      
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 p-1.5 rounded-lg hover:bg-gray-100" aria-label="Close">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div>
+        <h3 class="text-xl font-bold text-[#1F2937]" id="modal-room-title">Schedule a Campus Visit</h3>
+        <p class="text-xs text-[#4B5563] mt-1" id="modal-room-subtitle">Experience Shree Ram standards in person. Zero obligation.</p>
+      </div>
+
+      <form onsubmit="handleBookingSubmit(event)" class="mt-5 space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
+          <input type="text" required placeholder="Your name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Phone</label>
+            <input type="tel" required placeholder="+91 98XXX XXXXX" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Date</label>
+            <input type="date" required class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Campus</label>
+          <select id="modal-campus-select" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+            <option value="main">Main Campus, Knowledge Hub (500+ Beds)</option>
+            <option value="north">North City Wing (300+ Beds)</option>
+            <option value="tech">Tech Park Branch (400+ Beds)</option>
+            <option value="executive">Executive Block (200+ Beds)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-[#E53935] hover:bg-[#D32F2F] text-white py-3 rounded-xl text-xs font-bold shadow-sm transition-all cursor-pointer">
+          Confirm Free Visit Appointment
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-[#1F2937] text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-3">
+    <div class="w-5 h-5 rounded-full bg-[#E53935] text-white flex items-center justify-center text-xs shrink-0 font-bold">
+      ✓
+    </div>
+    <span id="toast-message" class="text-xs font-medium">Completed!</span>
+  </div>
+
+
+  <!-- JavaScript Interactivity -->
+  <script>
+    function initIcons() {
+      if (typeof lucide !== 'undefined' && lucide.createIcons) {
+        lucide.createIcons();
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initIcons);
+    } else {
+      initIcons();
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function openCallModal() {
+      document.getElementById('call-modal').classList.remove('hidden');
+    }
+    function closeCallModal() {
+      document.getElementById('call-modal').classList.add('hidden');
+    }
+
+    function openBookingModal(roomName) {
+      document.getElementById('modal-room-title').textContent = roomName ? 'Book a Visit for ' + roomName : 'Schedule a Free Campus Visit';
+      document.getElementById('booking-modal').classList.remove('hidden');
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+
+    function openRoomDetailsModal(campusName, beds, startingPrice, highlight) {
+      document.getElementById('modal-room-title').textContent = campusName + ' (' + beds + ')';
+      document.getElementById('modal-room-subtitle').textContent = highlight + ' • Starting ' + startingPrice;
+      document.getElementById('booking-modal').classList.remove('hidden');
+    }
+
+    function handleSearch(event) {
+      event.preventDefault();
+      const campus = document.getElementById('campus-select').value;
+      document.getElementById('campuses').scrollIntoView({ behavior: 'smooth' });
+
+      const cards = document.querySelectorAll('.branch-card');
+      cards.forEach(card => {
+        if (campus === 'all' || card.getAttribute('data-branch') === campus) {
+          card.style.opacity = '1';
+        } else {
+          card.style.opacity = '0.35';
+        }
+      });
+      setTimeout(() => {
+        cards.forEach(card => card.style.opacity = '1');
+      }, 3000);
+    }
+
+    function filterRooms(category) {
+      const tabs = document.querySelectorAll('.room-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-[#111827]', 'text-white');
+        tab.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+      });
+      event.currentTarget.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+      event.currentTarget.classList.add('bg-[#111827]', 'text-white');
+
+      const cards = document.querySelectorAll('.room-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3500);
+    }
+
+    function handleCallbackSubmit(event) {
+      event.preventDefault();
+      closeCallModal();
+      showToast('Thank you! We will call you back within 15 minutes.');
+    }
+
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      closeBookingModal();
+      showToast('Visit confirmed! Details sent to your mobile.');
+    }
+
+    window.onclick = function(event) {
+      const callModal = document.getElementById('call-modal');
+      const bookingModal = document.getElementById('booking-modal');
+      if (event.target === callModal) closeCallModal();
+      if (event.target === bookingModal) closeBookingModal();
+    }
+  </script>
+</body>
+</html>
