@@ -167,9 +167,10 @@
           <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-400"></i>
         </a>
         <div class="pt-2">
-          <button onclick="openCallModal()" class="w-full bg-[#E53935] text-white py-3 rounded-full text-sm font-bold shadow-sm">
-            Call Admissions: +91 98XXX XXXXX
-          </button>
+          <a href="tel:+919540792121" class="w-full bg-[#E53935] text-white py-3 rounded-full text-sm font-bold shadow-sm flex items-center justify-center gap-2">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Call Admissions: +91 95407 92121</span>
+          </a>
         </div>
       </nav>
     </div>
@@ -785,11 +786,11 @@
         <div class="md:col-span-4">
           <div class="bg-[#1A1C22] border border-[#2A2D35] rounded-2xl p-6 space-y-3.5">
             
-            <!-- Call us : +91 98XXX XXXXX (Coral Red #E53935) -->
+            <!-- Call us : +91 95407 92121 (Coral Red #E53935) -->
             <div class="text-xs sm:text-sm">
               <span class="text-zinc-300 font-medium">Call us : </span>
-              <a href="tel:+919876543210" class="text-[#E53935] font-semibold hover:underline">
-                +91 98XXX XXXXX
+              <a href="tel:+919540792121" class="text-[#E53935] font-semibold hover:underline">
+                +91 95407 92121
               </a>
             </div>
 
@@ -850,18 +851,18 @@
       </div>
 
       <div class="mt-6 space-y-3">
-        <a href="tel:+919876543210" class="flex items-center justify-between bg-[#E53935] hover:bg-[#D32F2F] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
+        <a href="tel:+919540792121" class="flex items-center justify-between bg-[#E53935] hover:bg-[#D32F2F] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
           <div class="flex items-center gap-3">
             <i data-lucide="phone" class="w-5 h-5"></i>
-            <span>Call: +91 98XXX XXXXX</span>
+            <span>Call: +91 95407 92121</span>
           </div>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
 
-        <a href="https://wa.me/919876543210?text=Hi%20Shree%20Ram%20Hostel,%20I%20am%20inquiring%20about%20room%20availability" target="_blank" class="flex items-center justify-between bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
+        <a href="https://wa.me/919540792121?text=Hi%20Shree%20Ram%20Hostel,%20I%20am%20inquiring%20about%20room%20availability" target="_blank" class="flex items-center justify-between bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
           <div class="flex items-center gap-3">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
-            <span>WhatsApp Admissions Desk</span>
+            <span>WhatsApp: +91 95407 92121</span>
           </div>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
@@ -870,9 +871,9 @@
       <div class="mt-5 pt-4 border-t border-gray-100">
         <h4 class="text-xs font-bold uppercase tracking-wider text-[#1F2937] mb-2">Request Instant Callback:</h4>
         <form onsubmit="handleCallbackSubmit(event)" class="space-y-2.5">
-          <input type="text" required placeholder="Your Name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
-          <input type="tel" required placeholder="Mobile Number" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
-          <button type="submit" class="w-full bg-[#111827] hover:bg-black text-white text-xs font-bold py-2.5 rounded-xl transition-colors">
+          <input type="text" id="callback-name" required placeholder="Your Name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          <input type="tel" id="callback-phone" required placeholder="Mobile Number (e.g. 9540792121)" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          <button type="submit" class="w-full bg-[#111827] hover:bg-black text-white text-xs font-bold py-2.5 rounded-xl transition-colors cursor-pointer">
             Request Callback
           </button>
         </form>
@@ -897,23 +898,23 @@
         <p class="text-xs text-[#4B5563] mt-1" id="modal-room-subtitle">Experience Shree Ram standards in person. Zero obligation.</p>
       </div>
 
-      <form onsubmit="handleBookingSubmit(event)" class="mt-5 space-y-3">
+      <form onsubmit="handleBookingSubmit(event)" class="mt-5 space-y-3.5">
         <div>
           <label class="block text-xs font-semibold text-gray-700 mb-1">Full Name</label>
-          <input type="text" required placeholder="Your name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+          <input type="text" id="booking-name" required placeholder="Enter your full name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-semibold text-gray-700 mb-1">Phone</label>
-            <input type="tel" required placeholder="+91 98XXX XXXXX" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Phone Number</label>
+            <input type="tel" id="booking-phone" required placeholder="e.g. 9540792121" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-gray-700 mb-1">Date</label>
-            <input type="date" required class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
+            <label class="block text-xs font-semibold text-gray-700 mb-1">College / Institute</label>
+            <input type="text" id="booking-college" required placeholder="e.g. DU, Bennett, Sharda, Galgotias..." class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
           </div>
         </div>
         <div>
-          <label class="block text-xs font-semibold text-gray-700 mb-1">Campus</label>
+          <label class="block text-xs font-semibold text-gray-700 mb-1">Select Campus / Branch</label>
           <select id="modal-campus-select" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#E53935]">
             <option value="main">Main Campus, Knowledge Hub (500+ Beds)</option>
             <option value="north">North City Wing (300+ Beds)</option>
@@ -1026,14 +1027,29 @@
 
     function handleCallbackSubmit(event) {
       event.preventDefault();
+      const name = document.getElementById('callback-name')?.value || '';
+      const phone = document.getElementById('callback-phone')?.value || '';
       closeCallModal();
-      showToast('Thank you! We will call you back within 15 minutes.');
+      showToast('Thank you! Connecting to Admissions (+91 95407 92121)...');
+      const msg = `Hi Shree Ram Hostel, please call me back.%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}`;
+      setTimeout(() => {
+        window.open(`https://wa.me/919540792121?text=${msg}`, '_blank');
+      }, 1000);
     }
 
     function handleBookingSubmit(event) {
       event.preventDefault();
+      const name = document.getElementById('booking-name')?.value || '';
+      const phone = document.getElementById('booking-phone')?.value || '';
+      const college = document.getElementById('booking-college')?.value || '';
+      const select = document.getElementById('modal-campus-select');
+      const campus = select ? select.options[select.selectedIndex]?.text : '';
       closeBookingModal();
-      showToast('Visit confirmed! Details sent to your mobile.');
+      showToast('Visit confirmed! Connecting to Admissions (+91 95407 92121)...');
+      const msg = `Hi Shree Ram Hostel, I want to book a campus visit.%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACollege: ${encodeURIComponent(college)}%0ACampus: ${encodeURIComponent(campus)}`;
+      setTimeout(() => {
+        window.open(`https://wa.me/919540792121?text=${msg}`, '_blank');
+      }, 1000);
     }
 
     window.onclick = function(event) {
