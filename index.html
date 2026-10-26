@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shree Ram Hostel™ | Furnished Premium Hostel & PG</title>
-  <meta name="description" content="Discover the ease of all-inclusive living at Shree Ram Hostel™. Luxurious furnished rooms, 24/7 security, high-speed Wi-Fi & nutritious meals near major colleges & IT hubs.">
+  <title>Shree Ram Hostel | Furnished Premium Hostel & PG</title>
+  <meta name="description" content="Discover the ease of all-inclusive living at Shree Ram Hostel. Luxurious furnished rooms, 24/7 security, high-speed Wi-Fi & nutritious meals near major colleges & IT hubs.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='8' y='8' width='84' height='84' rx='20' fill='none' stroke='%23E53935' stroke-width='14'/><rect x='32' y='32' width='36' height='36' rx='8' fill='%23E53935'/></svg>">
+  <!-- Favicon: Modern Shree Ram Hostel Logo -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' rx='13' fill='%23E53935'/><path d='M24 8L38 19V38C38 39.1 37.1 40 36 40H12C10.9 40 10 39.1 10 38V19L24 8Z' fill='none' stroke='white' stroke-width='2.8' stroke-linejoin='round'/><path d='M24 14V24M19 19L24 14L29 19' stroke='%23FFE082' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/><path d='M19 40V31C19 29.3 20.3 28 22 28H26C27.7 28 29 29.3 29 31V40' fill='none' stroke='white' stroke-width='2.5'/><circle cx='24' cy='6' r='2' fill='%23FFE082'/></svg>">
 
   <!-- Typography: Plus Jakarta Sans & Inter (Exact match with Settl.) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -77,24 +77,35 @@
 <body class="selection:bg-[#E53935] selection:text-white">
 
   <!-- ========================================================
-       1. HEADER / NAVBAR (Exact replica of Image 1)
-       - Background: Soft subtle blush tint #FFF5F2
-       - Left: Settl.-style red geometric logo + "Shree Ram Hostel™"
+       1. HEADER / NAVBAR
+       - Left: Brand-New Custom Aesthetic Logo + "Shree Ram Hostel"
        - Right: "Home" (active red), "Hostel Owners", "Explore Rooms",
                 "Call Now" pill button + 3-line hamburger icon
   ======================================================== -->
   <header class="sticky top-0 z-50 bg-[#FFF5F2] border-b border-[#F7E7E2]/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[76px] flex items-center justify-between">
       
-      <!-- Left Logo: Settl.-style rounded square icon + Shree Ram Hostel™ -->
-      <a href="#" class="flex items-center gap-2.5 group focus:outline-none">
-        <svg class="w-8 h-8 shrink-0 text-[#E53935]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="3" width="34" height="34" rx="9" stroke="#E53935" stroke-width="5"/>
-          <rect x="14" y="14" width="12" height="12" rx="3" fill="#E53935"/>
-        </svg>
-        <div class="flex items-baseline">
-          <span class="text-2xl font-bold tracking-tight text-[#1F2937] leading-none">
-            Shree Ram Hostel<span class="text-[#E53935] text-xs font-bold align-top ml-0.5">™</span>
+      <!-- Left Logo: Custom Elegant Logo Mark + Shree Ram Hostel -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <!-- New Custom Logo SVG -->
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#E53935] to-[#D32F2F] flex items-center justify-center text-white shadow-md shadow-[#E53935]/25 group-hover:scale-105 transition-transform duration-200">
+          <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Roofline Shelter -->
+            <path d="M24 7L39 19V39C39 40.1 38.1 41 37 41H11C9.9 41 9 40.1 9 39V19L24 7Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+            <!-- Elegant Spire / Pinnacle Arch -->
+            <path d="M24 13V24M18.5 19L24 13L29.5 19" stroke="#FFE082" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Gateway Arch -->
+            <path d="M19 41V32C19 30.3 20.3 29 22 29H26C27.7 29 29 30.3 29 32V41" stroke="white" stroke-width="2.6" stroke-linejoin="round"/>
+            <!-- Golden Pinnacle Dot -->
+            <circle cx="24" cy="5" r="2.2" fill="#FFE082"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-[#1F2937] leading-tight group-hover:text-[#E53935] transition-colors">
+            Shree Ram Hostel
+          </span>
+          <span class="text-[9.5px] font-bold tracking-[0.18em] uppercase text-[#E53935] leading-none mt-0.5">
+            Premium Co-Living
           </span>
         </div>
       </a>
@@ -123,7 +134,7 @@
           Call Now
         </button>
 
-        <!-- 3-line hamburger menu icon (matches Settl. desktop & mobile) -->
+        <!-- 3-line hamburger menu icon -->
         <button onclick="toggleMobileMenu()" class="p-1 text-[#E53935] hover:text-[#D32F2F] focus:outline-none cursor-pointer" aria-label="Toggle Navigation">
           <svg class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round">
             <line x1="3" y1="6" x2="21" y2="6"/>
@@ -166,9 +177,8 @@
 
 
   <!-- ========================================================
-       2. HERO SECTION (Exact replica of Image 1)
-       - Split 2-Column Layout
-       - Left: Clean, unobstructed high-res vertical photo (warm wooden table, cozy couch, ambient lamp)
+       2. HERO SECTION
+       - Left: Clean, unobstructed vertical photo (warm wooden table, cozy couch, ambient lamp)
        - Right:
          * Big bold H1: "Furnished Premium Hostel & PG in Knowledge Hub, Tech City & Prime Campuses."
          * Subtitle
@@ -182,7 +192,6 @@
         <!-- Left Side: Large vertical photo (clean, unobscured, warm ambient room) -->
         <div class="lg:col-span-5 order-2 lg:order-1">
           <div class="relative rounded-3xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] aspect-[3/4] max-h-[580px] w-full bg-gray-100">
-            <!-- High-res photo matching Settl. warm aesthetic (dining table, comfortable couch, ambient lamp) -->
             <img 
               src="https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1200&q=80" 
               alt="Furnished premium hostel and PG living room with wooden dining table, blue sofa and warm ambient lighting"
@@ -195,19 +204,19 @@
         <!-- Right Side: Heading, Subtitle, Floating Search Card, Stats Row -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6 lg:pl-2">
           
-          <!-- Big Bold H1 Heading (Exact Settl. style from Image 1) -->
+          <!-- Big Bold H1 Heading -->
           <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#1F2937] leading-[1.18] tracking-tight">
             Furnished Premium Hostel & PG in<br class="hidden sm:inline">
             Knowledge Hub, Tech City &<br class="hidden sm:inline">
             Prime Campuses.
           </h1>
 
-          <!-- Subtitle (Exact Settl. style from Image 1) -->
+          <!-- Subtitle -->
           <p class="text-sm sm:text-base text-[#4B5563] leading-relaxed max-w-xl font-normal">
             Discover the ease of all-inclusive living in a peaceful, secure & disciplined community, perfectly situated near major colleges & IT hubs!
           </p>
 
-          <!-- Floating Search Card (Exact Settl. style from Image 1) -->
+          <!-- Floating Search Card -->
           <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#F3F4F6] max-w-xl">
             <form onsubmit="handleSearch(event)" class="flex flex-col sm:flex-row items-stretch sm:items-end gap-3.5">
               
@@ -256,9 +265,7 @@
             </form>
           </div>
 
-          <!-- Stats Row (Exact replica of Image 1):
-               3 red line-art icons with red bold numbers
-          -->
+          <!-- Stats Row: 3 red line-art icons with red bold numbers -->
           <div class="pt-4 max-w-xl">
             <div class="flex items-center justify-between gap-4">
               
@@ -293,7 +300,7 @@
                 </div>
               </div>
 
-              <!-- Stat 3: 2000+ Students & Pros hosted -->
+              <!-- Stat 3: 2000+ Students hosted -->
               <div class="flex items-center gap-3">
                 <svg class="w-6 h-6 shrink-0 text-[#E53935]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -318,18 +325,12 @@
 
 
   <!-- ========================================================
-       3. SECTION 2: "COZY CORNERS ACROSS CAMPUSES" (Exact replica of Image 2)
-       - Section Title: "Cozy corners across locations!" (Left-aligned!)
-       - Subtitle: "Embrace a world of modern student & executive living: Comfort & security guaranteed!"
-       - 4-Card Responsive Grid:
-         * Clean rounded-2xl photo with smooth hover zoom
-         * Below photo: Branch title in bold font
-         * Subtext below title: Red line icon + "500+ Beds"
+       3. SECTION 2: "COZY CORNERS ACROSS CAMPUSES"
   ======================================================== -->
   <section id="campuses" class="py-16 lg:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Title & Subtitle (Left aligned, exactly like Image 2) -->
+      <!-- Section Title & Subtitle (Left-aligned) -->
       <div class="mb-10 text-left">
         <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#1F2937] tracking-tight">
           Cozy corners across locations!
@@ -339,12 +340,11 @@
         </p>
       </div>
 
-      <!-- 4-Card Responsive Grid (Exact replica of Image 2) -->
+      <!-- 4-Card Responsive Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Card 1: Main Campus, Knowledge Hub + 500+ Beds -->
+        <!-- Card 1: Main Campus, Knowledge Hub -->
         <div class="group cursor-pointer branch-card" data-branch="main" onclick="openRoomDetailsModal('Main Campus, Knowledge Hub', '500+ Beds', '₹8,499/mo', 'Engineering & Medical Hub')">
-          <!-- Rounded-2xl Photo with subtle zoom -->
           <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
             <img 
               src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
@@ -353,7 +353,6 @@
               loading="lazy"
             >
           </div>
-          <!-- Clean typography below photo (exact match to Image 2) -->
           <div class="pt-3.5 space-y-1">
             <h3 class="text-base font-bold text-[#1F2937] group-hover:text-[#E53935] transition-colors">
               Main Campus, Knowledge Hub
@@ -368,12 +367,12 @@
           </div>
         </div>
 
-        <!-- Card 2: North City Wing + 300+ Beds -->
+        <!-- Card 2: North City Wing -->
         <div class="group cursor-pointer branch-card" data-branch="north" onclick="openRoomDetailsModal('North City Wing', '300+ Beds', '₹7,999/mo', 'Near University Metro')">
           <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
             <img 
               src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80" 
-              alt="North City Wing historic and modern architectural landmark"
+              alt="North City Wing architectural landmark"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               loading="lazy"
             >
@@ -392,7 +391,7 @@
           </div>
         </div>
 
-        <!-- Card 3: Tech Park Branch + 400+ Beds -->
+        <!-- Card 3: Tech Park Branch -->
         <div class="group cursor-pointer branch-card" data-branch="tech" onclick="openRoomDetailsModal('Tech Park Branch', '400+ Beds', '₹9,200/mo', 'Opposite IT Park')">
           <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
             <img 
@@ -416,12 +415,12 @@
           </div>
         </div>
 
-        <!-- Card 4: Executive Block + 200+ Beds -->
+        <!-- Card 4: Executive Block -->
         <div class="group cursor-pointer branch-card" data-branch="executive" onclick="openRoomDetailsModal('Executive Block', '200+ Beds', '₹11,500/mo', 'Civil Lines Solo Living')">
           <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gray-100 shadow-sm">
             <img 
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-              alt="Executive Block upscale architecture and quiet residential enclave"
+              alt="Executive Block upscale architecture"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               loading="lazy"
             >
@@ -447,9 +446,9 @@
 
 
   <!-- ========================================================
-       4. SECTION 3: "SHREE RAM STANDARDS" (Exact replica of Image 3)
+       4. SECTION 3: "SHREE RAM STANDARDS"
        - Split Layout:
-         * Left: Overlapping dual-photo montage (sunny happy student studying + overlapping garden/entrance)
+         * Left: Overlapping dual-photo montage
          * Right:
            - Title: "Shree Ram standards"
            - Subtitle: "Your hostel life, elevated for peace of mind & focus!"
@@ -460,7 +459,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
-        <!-- Left: Overlapping dual-photo montage (Exact replica of Image 3) -->
+        <!-- Left: Overlapping dual-photo montage -->
         <div class="lg:col-span-5 relative">
           <div class="relative w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
             
@@ -474,7 +473,7 @@
               >
             </div>
 
-            <!-- Smaller overlapping photo at bottom-left (charming yellow facade / garden) -->
+            <!-- Smaller overlapping photo at bottom-left -->
             <div class="absolute -bottom-6 -left-3 sm:-left-6 w-44 sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white z-20">
               <img 
                 src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" 
@@ -491,7 +490,7 @@
         <div class="lg:col-span-7 space-y-6 pt-6 lg:pt-0">
           
           <div>
-            <!-- Title (Exact Settl. style from Image 3) -->
+            <!-- Title -->
             <h2 class="text-3xl sm:text-4xl font-bold text-[#1F2937] tracking-tight">
               Shree Ram standards
             </h2>
@@ -502,7 +501,7 @@
             </p>
           </div>
 
-          <!-- 6-Item Feature Grid: 3 COLUMNS × 2 ROWS (Exact replica of Image 3) -->
+          <!-- 6-Item Feature Grid: 3 COLUMNS × 2 ROWS -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-y-7 gap-x-5 pt-3">
             
             <!-- Item 1: 24/7 power backup -->
@@ -561,9 +560,7 @@
 
           </div>
 
-          <!-- Outlined Red Button (Exact Settl. style from Image 3):
-               border-2 border-[#E53935] text-[#E53935] hover:bg-[#E53935] hover:text-white rounded-md px-6 py-2.5 font-medium transition-all
-          -->
+          <!-- Outlined Red Button -->
           <div class="pt-3">
             <a 
               href="#explore-rooms" 
@@ -728,28 +725,36 @@
 
 
   <!-- ========================================================
-       6. FOOTER (Exact replica of Image 4)
-       - Solid Matte Black (#0D0E11), text-white
-       - Col 1: Logo + short paragraph
-       - Col 2: "Useful Links" with 2 sub-columns side-by-side
-       - Col 3: Sleek dark rounded card (#1A1C22) with Call us, Email ID in Coral Red, Regd Office / Campus Address
+       6. FOOTER
+       - Col 1: Custom Shree Ram Hostel logo + description (no TM)
+       - Col 2: "Useful Links" in 2 sub-columns
+       - Col 3: Sleek dark rounded card #1A1C22
   ======================================================== -->
   <footer class="bg-[#0D0E11] text-white pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- 3-Column Layout (Exact match to Image 4) -->
+      <!-- 3-Column Layout -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-zinc-800">
         
         <!-- Col 1: Logo + Short Paragraph -->
         <div class="md:col-span-4 space-y-4">
-          <a href="#" class="flex items-center gap-2.5 group">
-            <svg class="w-8 h-8 shrink-0 text-[#E53935]" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="34" height="34" rx="9" stroke="#E53935" stroke-width="5"/>
-              <rect x="14" y="14" width="12" height="12" rx="3" fill="#E53935"/>
-            </svg>
-            <span class="text-2xl font-bold tracking-tight text-white leading-none">
-              Shree Ram Hostel<span class="text-[#E53935] text-xs font-bold align-top ml-0.5">™</span>
-            </span>
+          <a href="#" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E53935] to-[#D32F2F] flex items-center justify-center text-white shadow-md shadow-[#E53935]/20">
+              <svg class="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 7L39 19V39C39 40.1 38.1 41 37 41H11C9.9 41 9 40.1 9 39V19L24 7Z" stroke="white" stroke-width="3.2" stroke-linejoin="round"/>
+                <path d="M24 13V24M18.5 19L24 13L29.5 19" stroke="#FFE082" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 41V32C19 30.3 20.3 29 22 29H26C27.7 29 29 30.3 29 32V41" stroke="white" stroke-width="2.8" stroke-linejoin="round"/>
+                <circle cx="24" cy="5" r="2.2" fill="#FFE082"/>
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xl font-black tracking-tight text-white leading-tight">
+                Shree Ram Hostel
+              </span>
+              <span class="text-[9px] font-bold tracking-[0.16em] uppercase text-[#E53935]">
+                Premium Co-Living
+              </span>
+            </div>
           </a>
           
           <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal max-w-sm">
@@ -757,7 +762,7 @@
           </p>
         </div>
 
-        <!-- Col 2: Useful Links (2 sub-columns side-by-side, exact match to Image 4) -->
+        <!-- Col 2: Useful Links (2 sub-columns side-by-side) -->
         <div class="md:col-span-4 space-y-4">
           <h3 class="text-sm font-bold text-white">Useful Links</h3>
           <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm text-zinc-400">
@@ -776,7 +781,7 @@
           </div>
         </div>
 
-        <!-- Col 3: Sleek dark rounded card #1A1C22 (Exact match to Image 4) -->
+        <!-- Col 3: Sleek dark rounded card #1A1C22 -->
         <div class="md:col-span-4">
           <div class="bg-[#1A1C22] border border-[#2A2D35] rounded-2xl p-6 space-y-3.5">
             
@@ -796,7 +801,7 @@
               </a>
             </div>
 
-            <!-- Campus Address : followed by details -->
+            <!-- Campus Address -->
             <div class="text-xs sm:text-sm pt-1">
               <span class="text-zinc-300 font-medium">Campus Address :</span>
               <p class="font-bold text-white text-sm mt-1.5">
@@ -814,7 +819,7 @@
 
       <!-- Footer Bottom Copyright -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-        <p>© 2026 Shree Ram Hostel™. All rights reserved.</p>
+        <p>© 2026 Shree Ram Hostel. All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-zinc-400 transition-colors">Terms of Stay</a>
           <a href="#" class="hover:text-zinc-400 transition-colors">Privacy</a>
@@ -840,14 +845,14 @@
         <div class="w-12 h-12 rounded-2xl bg-[#FFF5F2] text-[#E53935] flex items-center justify-center mx-auto mb-3">
           <i data-lucide="phone-call" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-xl font-bold text-[#1F2937]">Call Shree Ram Hostel™</h3>
+        <h3 class="text-xl font-bold text-[#1F2937]">Call Shree Ram Hostel</h3>
         <p class="text-xs text-[#4B5563] mt-1">Admissions & counselling open 24/7.</p>
       </div>
 
       <div class="mt-6 space-y-3">
         <a href="tel:+919876543210" class="flex items-center justify-between bg-[#E53935] hover:bg-[#D32F2F] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
           <div class="flex items-center gap-3">
-            <i data-lucide="phone" class="w-4 h-4"></i>
+            <i data-lucide="phone" class="w-5 h-5"></i>
             <span>Call: +91 98XXX XXXXX</span>
           </div>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -855,7 +860,7 @@
 
         <a href="https://wa.me/919876543210?text=Hi%20Shree%20Ram%20Hostel,%20I%20am%20inquiring%20about%20room%20availability" target="_blank" class="flex items-center justify-between bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3.5 rounded-xl font-bold text-sm shadow-sm transition-all">
           <div class="flex items-center gap-3">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
             <span>WhatsApp Admissions Desk</span>
           </div>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
