@@ -80,4 +80,4 @@ A pixel-perfect, modern, ultra-clean landing page for **Shree Ram Hostel**, crea
 
 ## 🌐 Live Website
 
-- **Public URL**: [https://itssachin-385.github.io/shree-ram-hostel/](https://itssachin-385.github.io/shree-ram-hostel/)
+- **Public URL**: [https://dev-matrix38.github.io/shree-ram-hostel/](https://dev-matrix38.github.io/shree-ram-hostel/)
